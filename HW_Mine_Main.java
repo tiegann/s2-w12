@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class HW_Mine_Main{
     HW_Mine[][] grid = new HW_Mine[10][10];
     
