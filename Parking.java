@@ -12,8 +12,12 @@ public class Parking {
   //YOU -- WHAT IS THE BASE CASE? Recursive Case? 
   //HINT it is similar to the double recursive call we did in class
   public int park(double space){
-     
-    
+    if(space < 1){
+      return 0;
+    }else{
+      double backOfCar = Math.random()*space; 
+      return 1 + park(backOfCar) + park(space-(backOfCar+1));
+    }
 
   }
 
@@ -27,4 +31,8 @@ public class Parking {
     System.out.println("Average Number of Cars: " + totalCars*1.0/times);
   }
 
+  public static void main(String[] args){
+  new Parking();
+
+}
 }
